@@ -157,17 +157,53 @@ P.S. Ma’am, sana po mataas ang grades namin. Hindi po ito suhol, appreciation 
  `
       },
       {
-        name: "Angel",
-        message:  ` `
+        name: "Arnold",
+        message:  `Hi ma'am mathhhh!! Thank you for your patience, kindness, and dedication. You are not only a teacher but also an inspiration to us. We are grateful for everything you do to help us learn and become better people. May you always be blessed with happiness and good health.
+Thank you for being an amazing teacher! 💐
+With love and gratitude,
+Your Student
+ `
       },
       {
-        name: "Angel",
-        message:  ` `
+        name: "Sharif",
+        message:  `Happy Teachers Day Ma'am!! Thank you for your patience, kindness, and dedication. You are not only a teacher but also an inspiration to us. We are grateful for everything you do to help us learn and become better people. May you always be blessed with happiness and good health.
+Thank you for being an amazing teacher! 💐
+With love and gratitude,
+Your Student
+`
       },
       {
-        name: "Angel",
-        message:  ` `
+        name: "Abubakar",
+        message:  ` Happy Teachers’ Day! Thank you for sharing your knowledge, inspiring our dreams, and guiding us toward a brighter future. Your hard work and dedication will always be appreciated. Keep inspiring and making a difference!🤍
+We are so grateful to have you as our teacher!🫶🏻`
       },
+      {
+        name: "Adzmie",
+        message:  ` happy teacher days ma’am lab ka namin maskin bulaog kami 🫶
+`
+      },
+      {
+        name: "Amin",
+        message:  ` Happy Teacher’s Day!
+
+Thank you for your patience, kindness, and dedication to teaching us. You are not only our teacher but also our guide and inspiration. Thank you for helping us learn new things and for encouraging us to do our best every day.
+
+We appreciate all your hard work and the time you spend teaching us. We are lucky to have a teacher like you. May you always be happy, healthy, and blessed.
+
+Once again, Happy Teacher’s Day! We love and appreciate you, Ma’am/Sir!`
+      },
+      {
+        name: "Sitti Aina",
+        message:  ` Happy Teacher's Day, Ma'am!
+
+On this special day, I want to say thank you. Thank you for your dedication, your hard work, and for never giving up on us even when we are slow to understand.
+
+You inspire us to be better students and better people. Your kindness and guidance mean so much to us.
+
+May God bless you with good health and happiness always. We appreciate you, Ma'am Tabid!
+`
+      },
+
   ];
   
   const welcomeScreen = document.getElementById("welcomeScreen");
@@ -228,44 +264,29 @@ P.S. Ma’am, sana po mataas ang grades namin. Hindi po ito suhol, appreciation 
     }, 200);
   }
   
-  openButton.addEventListener("click", () => {
-    openButton.disabled = true;
-    welcomeScreen.classList.add("opened");
   
-    window.setTimeout(() => {
-      welcomeScreen.hidden = true;
-      lettersScreen.hidden = false;
-  
-      showLetter();
-  
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }, 1900);
+const backgroundMusic = document.getElementById("backgroundMusic");
+
+openButton.addEventListener("click", () => {
+  openButton.disabled = true;
+
+  backgroundMusic.volume = 0.5;
+
+  backgroundMusic.play().catch((error) => {
+    console.error("Unable to play background music:", error);
   });
-  
-  backButton.addEventListener("click", () => {
-    changeLetter(-1);
-  });
-  
-  nextButton.addEventListener("click", () => {
-    changeLetter(1);
-  });
-  
-  document.addEventListener("keydown", (event) => {
-    if (lettersScreen.hidden) {
-      return;
-    }
-  
-    if (event.key === "ArrowLeft") {
-      changeLetter(-1);
-    }
-  
-    if (event.key === "ArrowRight") {
-      changeLetter(1);
-    }
-  });
-  
-  showLetter();
-  
+
+  welcomeScreen.classList.add("opened");
+
+  window.setTimeout(() => {
+    welcomeScreen.hidden = true;
+    lettersScreen.hidden = false;
+
+    showLetter();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, 1900);
+});
