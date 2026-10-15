@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f9dce8">
+  <meta name="description" content="A heartfelt collection of Teacher's Day letters from BSCS III-C.">
+  <title>Letters from the Heart | BSCS III-C</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main>
+    <!-- Opening Curtain -->
+    <section class="welcome-screen" id="welcomeScreen">
+
+      <div class="welcome-content">
+        <span class="eyebrow">
+          A SPECIAL TEACHER'S DAY SURPRISE
+        </span>
+
+        <div class="flower flower-one" aria-hidden="true">✿</div>
+        <div class="flower flower-two" aria-hidden="true">❀</div>
+        <div class="heart heart-one" aria-hidden="true">♡</div>
+
+        <p class="small-heading">
+          To our wonderful teacher
+        </p>
+
+        <h1>
+          Letters from<br>
+          <em>the heart.</em>
+        </h1>
+
+        <p class="welcome-description">
+          A little collection of love, gratitude, and memories
+          from the students whose lives you've touched.
+        </p>
+
+        <button
+          class="open-button"
+          id="openButton"
+          type="button"
+        >
+          <span class="sparkle" aria-hidden="true">✧</span>
+          Open Sesame
+          <span class="button-heart" aria-hidden="true">♡</span>
+        </button>
+
+        <p class="welcome-footer">
+          With love, from BSCS III-C
+        </p>
+      </div>
+
+      <div class="curtain curtain-left" aria-hidden="true">
+        <div class="curtain-shine"></div>
+        <div class="curtain-bottom"></div>
+      </div>
+
+      <div class="curtain curtain-right" aria-hidden="true">
+        <div class="curtain-shine"></div>
+        <div class="curtain-bottom"></div>
+      </div>
+
+      <div class="curtain-top" aria-hidden="true"></div>
+    </section>
+
+
+    <!-- Student Letters -->
+    <section
+      class="letters-screen"
+      id="lettersScreen"
+      hidden
+    >
+
+      <header class="header">
+        <a href="#" class="logo" aria-label="Dear Teacher">
+          dear teacher <span>♡</span>
+        </a>
+
+        <span class="header-label">
+          A TEACHER'S DAY GIFT
+        </span>
+      </header>
+
+      <div class="letters-container">
+
+        <p class="section-label">
+          ✿ &nbsp; A FEW WORDS FROM US &nbsp; ✿
+        </p>
+
+        <h2>Letters from the heart</h2>
+
+        <p class="section-description">
+          Every letter holds a little piece of our gratitude.
+        </p>
+
+        <p class="class-label">
+          A heartfelt tribute from BSCS III-C
+        </p>
+
+        <div class="letter-area">
+
+          <span class="decoration decoration-one" aria-hidden="true">✿</span>
+          <span class="decoration decoration-two" aria-hidden="true">♡</span>
+          <span class="decoration decoration-three" aria-hidden="true">❀</span>
+          <span class="decoration decoration-four" aria-hidden="true">♥</span>
+
+          <article class="letter-card" id="letterCard">
+
+            <div class="letter-header">
+              <span class="letter-tag">
+                Written with love
+              </span>
+
+              <span id="letterNumber">
+                LETTER 01
+              </span>
+            </div>
+
+            <div class="letter-icon" aria-hidden="true">
+              ❀
+            </div>
+
+            <div class="letter-body">
+
+              <p class="greeting">
+                Dear Ma'am / Sir,
+              </p>
+
+              <p class="message" id="letterMessage"></p>
+
+              <p class="closing">
+                With love and gratitude,
+              </p>
+
+              <p class="student-name" id="studentName"></p>
+
+            </div>
+
+            <div class="letter-footer" aria-hidden="true">
+              <span>♡</span>
+              <span>✿ &nbsp; ❀ &nbsp; ✿</span>
+              <span>♡</span>
+            </div>
+
+          </article>
+        </div>
+
+        <!-- Letter Navigation -->
+        <div class="navigation">
+
+          <button
+            class="nav-button back-button"
+            id="backButton"
+            type="button"
+          >
+            ← Back
+          </button>
+
+          <div class="progress-container">
+            <p>
+              <span id="currentCount">1</span>
+              of
+              <span id="totalCount">5</span>
+              letters
+            </p>
+
+            <div
+              class="progress-bar"
+              role="progressbar"
+              aria-label="Letter reading progress"
+              aria-valuemin="1"
+              aria-valuemax="5"
+              aria-valuenow="1"
+              id="progressBar"
+            >
+              <div
+                class="progress-fill"
+                id="progressFill"
+              ></div>
+            </div>
+          </div>
+
+          <button
+            class="nav-button next-button"
+            id="nextButton"
+            type="button"
+          >
+            Next →
+          </button>
+
+        </div>
+
+        <p class="final-message" id="finalMessage" hidden>
+          Thank you for being such a wonderful teacher. ♡
+        </p>
+
+      </div>
+
+      <footer class="page-footer">
+        Made with love by BSCS III-C
+        <span aria-hidden="true">♡</span>
+      </footer>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
