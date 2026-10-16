@@ -1102,3 +1102,103 @@ h2 {
     }
   }
   
+/* Floating Teacher's Day Decorations */
+.floating-decorations {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  isolation: isolate;
+}
+
+.decoration {
+  position: absolute;
+  bottom: -80px;
+  display: block;
+  opacity: 0;
+  user-select: none;
+  will-change: transform, opacity;
+  animation: floatUp linear infinite;
+}
+
+/* Hearts */
+.heart {
+  color: #f08ab5;
+  font-family: Georgia, serif;
+  font-size: clamp(20px, 3vw, 34px);
+  text-shadow: 0 3px 12px rgba(240, 138, 181, 0.2);
+}
+
+/* Flowers */
+.flower {
+  font-size: clamp(17px, 2.5vw, 27px);
+  filter: drop-shadow(0 3px 5px rgba(231, 130, 169, 0.12));
+}
+
+/* Ribbons */
+.ribbon {
+  color: #e889b0;
+  font-size: clamp(22px, 3vw, 32px);
+  text-shadow: 0 3px 10px rgba(232, 137, 176, 0.15);
+}
+
+/* Different positions and floating speeds */
+.decoration:nth-child(1)  { left: 5%;  animation-duration: 15s; animation-delay: 0s; }
+.decoration:nth-child(2)  { left: 12%; animation-duration: 19s; animation-delay: 3s; }
+.decoration:nth-child(3)  { left: 20%; animation-duration: 17s; animation-delay: 6s; }
+.decoration:nth-child(4)  { left: 29%; animation-duration: 21s; animation-delay: 1s; }
+.decoration:nth-child(5)  { left: 37%; animation-duration: 16s; animation-delay: 8s; }
+.decoration:nth-child(6)  { left: 45%; animation-duration: 20s; animation-delay: 4s; }
+.decoration:nth-child(7)  { left: 53%; animation-duration: 18s; animation-delay: 10s; }
+.decoration:nth-child(8)  { left: 61%; animation-duration: 22s; animation-delay: 2s; }
+.decoration:nth-child(9)  { left: 69%; animation-duration: 16s; animation-delay: 7s; }
+.decoration:nth-child(10) { left: 76%; animation-duration: 19s; animation-delay: 5s; }
+.decoration:nth-child(11) { left: 83%; animation-duration: 17s; animation-delay: 11s; }
+.decoration:nth-child(12) { left: 91%; animation-duration: 21s; animation-delay: 3s; }
+.decoration:nth-child(13) { left: 16%; animation-duration: 23s; animation-delay: 12s; }
+.decoration:nth-child(14) { left: 40%; animation-duration: 18s; animation-delay: 14s; }
+.decoration:nth-child(15) { left: 73%; animation-duration: 20s; animation-delay: 9s; }
+.decoration:nth-child(16) { left: 96%; animation-duration: 17s; animation-delay: 13s; }
+
+@keyframes floatUp {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-12deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.65;
+  }
+
+  50% {
+    transform: translate3d(24px, -50vh, 0) rotate(12deg);
+    opacity: 0.7;
+  }
+
+  90% {
+    opacity: 0.45;
+  }
+
+  100% {
+    transform: translate3d(-18px, -115vh, 0) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+/* Keep the actual website content above the decorations */
+#welcomeScreen,
+#lettersScreen {
+  position: relative;
+  z-index: 1;
+}
+
+/* Respect visitors who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .decoration {
+    animation: none;
+    display: none;
+  }
+}
